@@ -1,4 +1,4 @@
-# asdf-minikube
+# asdf-astartectl
 
 [![Build Status](https://github.com/Annopaolo/asdf-astartectl/workflows/main/badge.svg)](https://github.com/Annopaolo/asdf-astartectl/actions)
 
