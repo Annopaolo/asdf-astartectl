@@ -28,16 +28,17 @@ install_astartectl() {
         exit
     fi
 
-    download="https://github.com/astarte-platform/astartectl/releases/download/v${install_version}/astartectl_${install_version}_${os}_${arch}.tar.gz"
-    filename="${install_path}/bin/astartectl.tar.gz"
+    filename="astartectl_${install_version}_${os}_${arch}.tar.gz"
+    download="https://github.com/astarte-platform/astartectl/releases/download/v${install_version}/${filename}"
 
     if [ ! -d "${install_path}/bin" ]; then
         mkdir -p "${install_path}/bin"
     fi
 
+    cd "${install_path}/bin"
     curl -fL# -o "${filename}" "${download}"
-    tar -xzvf "astartectl_${install_version}_${os}_${arch}.tar.gz"
-    rm "astartectl_${install_version}_${os}_${arch}.tar.gz"
+    tar -xzvf "${filename}"
+    rm "${filename}"
     chmod +x "${install_path}/bin/astartectl"
 }
 
